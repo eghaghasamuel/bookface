@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import django_heroku
+import dj_database_url
 
 
 
@@ -30,7 +31,7 @@ SECRET_KEY = '3_!79h^(*nw8+ul$-hb03lr&&jwlucwg_zek^rdl=0@h_b(tlf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -126,8 +127,8 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR,"static")
 STATIC_URL = '/static/'
-#LOGIN_REDIRECT_URL = 'welcome'
-#LOGIN_URL = 'login'
+
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
